@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View, ScrollView} from "react-native";
+import {Image, StyleSheet, Text, View} from "react-native";
 import React from 'react';
 
 import {bindActionCreators} from 'redux';
@@ -34,7 +34,7 @@ class AlbumScreen extends React.Component {
     render() {
         let myCounter = this.props.items.find(item=>item.id === this.id).counter;
         return (
-            <ScrollView style={styles.ContainerStyle}>
+            <View style={styles.ContainerStyle}>
                     <View style={styles.runningText}>
                         <Text style={styles.titleStyle}>{this.title}</Text>
                         <Text style={styles.descriptionStyle}>{this.details}</Text>
@@ -46,7 +46,7 @@ class AlbumScreen extends React.Component {
                         counter={myCounter}
                         increment={this.increment.bind(this)}
                         decrement={this.decrement.bind(this)}  />
-            </ScrollView>
+            </View>
         );
     }
 }
@@ -67,21 +67,20 @@ export default connect(mapStateToProps,mapDispatchToProps)(AlbumScreen);
 
 const styles = StyleSheet.create({
     ContainerStyle: {
-        flexGrow: 1,
+        flex: 3,
         backgroundColor: 'rgb(211,211,211)',
+        alignItems: 'center',
     },
     imageStyle: {
         height: 200,
         width: 200,
-        marginTop: 50,
-        justifyContent: 'center',
+        marginTop: 50
     },
     titleStyle: {
         fontSize: 18,
         color: '#ff69b4',
         marginTop: 30,
-        marginBottom: 10,
-        alignItems: 'center'
+        marginBottom: 10
     },
     descriptionStyle: {
         fontSize: 12,
@@ -89,7 +88,5 @@ const styles = StyleSheet.create({
     },
     runningText: {
         width: 330,
-        alignItems: 'center',
-        textAlign: 'center'
     },
 });

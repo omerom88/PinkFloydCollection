@@ -21,7 +21,7 @@ export default class Album extends React.Component {
               <View style={styles.runningText}>
                 <Text style={styles.titleStyle}>{this.props.itemName}</Text>
                 <Text style={styles.descriptionStyle}>{this.props.itemDescription}</Text>
-                <Text>{this.props.myCounter}</Text>
+                {/*<Text>{this.props.myCounter}</Text>*/}
               </View>
             </View>
           </View>
