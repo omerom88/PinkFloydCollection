@@ -21,8 +21,8 @@ export default class Album extends React.Component {
               <View style={styles.runningText}>
                 <Text style={styles.titleStyle}>{this.props.itemName}</Text>
                 <Text style={styles.descriptionStyle}>{this.props.itemDescription}</Text>
-                {/*<Text>{this.props.myCounter}</Text>*/}
               </View>
+              <Text>{this.props.itemRank}</Text>
             </View>
           </View>
         </Card>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   runningText: {
-    width: 330,
+    width: 280,
   }
 });
 

@@ -31,7 +31,7 @@ export default class App extends React.Component {
 const AppNavigator = createStackNavigator(
     {
       Login: LoginScreen,
-      Collection: CollectionScreen,
+      Collections: CollectionScreen,
       Album: AlbumScreen,
     },
     {

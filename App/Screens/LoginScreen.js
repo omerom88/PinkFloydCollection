@@ -14,7 +14,7 @@ export default class LoginScreen extends React.Component {
                 <UserPassword />
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => this.props.navigation.push('Collection')}>
+                    onPress={() => this.props.navigation.push('Collections')}>
                     <Text style={styles.text}>LOGIN</Text>
                 </TouchableOpacity>
             </ScrollView>

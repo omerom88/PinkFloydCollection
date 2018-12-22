@@ -32,7 +32,7 @@ class AlbumScreen extends React.Component {
     }
 
     render() {
-        let myCounter = this.props.items.find(item=>item.id === this.id).counter;
+        let myCounter = this.props.dataList.find(item=>item.id === this.id).rank;
         return (
             <View style={styles.ContainerStyle}>
                     <View style={styles.runningText}>
@@ -52,8 +52,8 @@ class AlbumScreen extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-                const {items} = state.counter;
-                return {items};
+                const {dataList} = state.counter;
+                return {dataList};
 
 };
 
