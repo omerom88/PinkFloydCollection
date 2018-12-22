@@ -1,7 +1,6 @@
 import * as types from "../Actions/ActionTypes";
 
 const initialState = {
-  // items: Array(12).fill('').map((_,index)=>({id:index+1,counter:0}))
   dataList : [
     {name: "Animals", url: 'https://upload.wikimedia.org/wikipedia/en/7/74/Pink_Floyd-Animals-Frontal.jpg', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lorem felis, rutrum sit amet orci eget, convallis rhoncus felis. Fusce tempus purus nisi, at fermentum nisl lacinia sed. Pellentesque sit amet gravida orci. Integer sed congue purus, eu tempor quam.", id: 1, rank: 0},
     {name: "Atom Heart Mother", url: 'https://upload.wikimedia.org/wikipedia/en/2/2e/AtomHeartMotherCover.jpeg', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lorem felis, rutrum sit amet orci eget, convallis rhoncus felis. Fusce tempus purus nisi, at fermentum nisl lacinia sed. Pellentesque sit amet gravida orci. Integer sed congue purus, eu tempor quam.", id: 2, rank: 0},

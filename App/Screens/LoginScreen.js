@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {TouchableOpacity, ScrollView, Text, StyleSheet} from "react-native";
 
 import Logo from "../Components/LoginItems/Logo"
 import UserName from "../Components/LoginItems/UserName"
-import UserPassword from "../Components/LoginItems/UserPasswor"
+import UserPassword from "../Components/LoginItems/UserPasword"
 
 export default class LoginScreen extends React.Component {
     render() {

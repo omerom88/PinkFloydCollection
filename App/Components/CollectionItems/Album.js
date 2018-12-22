@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, View, Image, TouchableWithoutFeedback, StyleSheet } from 'react-native';
 import Card from '../LoginItems/Card'
-import { connect } from 'react-redux';
-
 
 
 export default class Album extends React.Component {
@@ -57,7 +55,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   runningText: {
-    width: 280,
+    width: 230,
   }
 });
 

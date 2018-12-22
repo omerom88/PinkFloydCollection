@@ -25,9 +25,8 @@ export default class CollectionScreen extends React.Component {
     }
 
     renderItem(item) {
-        const { name, url, description, id, rank } = item;
+        const { name, url, description, rank } = item;
         const onPressFunc = this.onPressItem.bind(this, item);
-        console.log(rank)
         return (
         <Album itemName={name} imageUrl = {url} itemDescription={description} itemRank={rank} onPress={onPressFunc}/>
         );
