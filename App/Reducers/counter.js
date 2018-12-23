@@ -18,7 +18,7 @@ const initialState = {
 };
 
 export default function counter(state = initialState, action = {}) {
-  let data = state.dataList;
+  let data = state.dataList.slice(0);
   let dataIndex = data.findIndex(item=> item.id === action.payload);
 
   switch (action.type) {

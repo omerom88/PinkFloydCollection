@@ -24,7 +24,6 @@ export default class LoginScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 3,
         backgroundColor: 'rgb(211,211,211)'
     },
     button: {

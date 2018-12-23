@@ -1,15 +1,13 @@
 import {StyleSheet, ScrollView, FlatList} from "react-native";
 import React from 'react';
 import Album from "../Components/CollectionItems/Album"
-import {bindActionCreators} from 'redux';
-import * as counterActions from "../Actions/counterActions";
 import { connect } from 'react-redux';
 
 @connect(state => ({
     state: state.counter
 }))
 
-export default class CollectionScreen extends React.Component {
+class CollectionScreen extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -33,12 +31,13 @@ export default class CollectionScreen extends React.Component {
     }
 
     render() {
+            console.log("render");
         return (
             <ScrollView style={styles.container}>
                 <FlatList
-                    data={this.props.state.dataList}
-                    key={this.props.state.dataList.name}
+                    data={this.props.dataList}
                     keyExtractor={item => item.name}
+                    extraData={this.props.dataList}
                     renderItem={({ item }) => this.renderItem(item)}/>
             </ScrollView>
         );
@@ -50,11 +49,7 @@ const mapStateToProps = (state) => {
     return {dataList};
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {actions: bindActionCreators(counterActions, dispatch)}
-};
-
-connect(mapStateToProps,mapDispatchToProps)(CollectionScreen);
+export default connect(mapStateToProps,{})(CollectionScreen);
 
 
 const styles = StyleSheet.create({
