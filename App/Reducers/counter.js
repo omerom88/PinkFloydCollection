@@ -24,15 +24,23 @@ export default function counter(state = initialState, action = {}) {
   switch (action.type) {
     case types.INCREMENT:
       if(dataIndex>-1){
-        data[dataIndex].rank += 1;
+        if (data[dataIndex].rank + 1 === 11){
+          data[dataIndex].rank = 10;
+        } else {
+          data[dataIndex].rank += 1;
+        }
       }
       return {
         ...state,
         dataList: data
       };
     case types.DECREMENT:
-      if(index>-1){
-        data[dataIndex].rank -= 1;
+      if(dataIndex>-1){
+        if (data[dataIndex].rank - 1 === -1){
+          data[dataIndex].rank = 0;
+        } else {
+          data[dataIndex].rank -= 1;
+        }
       }
       return {
         ...state,

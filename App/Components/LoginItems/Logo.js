@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, Image} from 'react-native';
+import {StyleSheet, View, Text, Image, Dimensions} from 'react-native';
 
 import logoImg from '../../Assets/pink-floyd-logo.png';
+
+const { width, height } = Dimensions.get('window');
 
 export default class Logo extends Component {
     render() {
@@ -20,8 +22,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     image: {
-        width: 180,
-        height: 180,
+        height: height * 0.3,
+        width: width * 0.5,
         resizeMode: 'contain',
     },
     text: {
@@ -29,5 +31,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         backgroundColor: 'transparent',
         fontSize: 18,
+        marginBottom: height * 0.1,
     },
 });

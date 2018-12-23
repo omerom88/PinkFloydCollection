@@ -1,7 +1,8 @@
 import React from 'react';
-import { Text, View, Image, TouchableWithoutFeedback, StyleSheet } from 'react-native';
+import {Text, View, Image, TouchableWithoutFeedback, StyleSheet, Dimensions} from 'react-native';
 import Card from '../LoginItems/Card'
 
+const { width} = Dimensions.get('window');
 
 export default class Album extends React.Component {
 
@@ -40,22 +41,21 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   imageStyle: {
-    height: 78,
-    width: 78,
-    marginRight: 10,
+    height: width * 0.3,
+    width: width * 0.3  ,
+    marginRight: width * 0.03,
   },
   titleStyle: {
     fontSize: 14,
     color: 'black',
-    marginRight: 20,
   },
   descriptionStyle: {
     fontSize: 11,
     color: 'rgba(0,0,0,0.5)',
-    marginRight: 20,
+    marginRight: width * 0.05,
   },
   runningText: {
-    width: 230,
+    width: width * 0.55,
   }
 });
 

@@ -1,6 +1,6 @@
 Welcome to PinkFloydAlbum app.
 In the app you will find the collection of all band albums released,
-with details, album cover and the user personal rank for every album in the collection.
+with details, album cover and the user personal rank (1-10) for every album in the collection.
 
 To run the app, the user will need to connect to Expo service, explained here:
 https://expo.io/

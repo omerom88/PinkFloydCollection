@@ -26,15 +26,14 @@ class CollectionScreen extends React.Component {
         const { name, url, description, rank } = item;
         const onPressFunc = this.onPressItem.bind(this, item);
         return (
-        <Album itemName={name} imageUrl = {url} itemDescription={description} itemRank={rank} onPress={onPressFunc}/>
+            <Album itemName={name} imageUrl = {url} itemDescription={description} itemRank={rank} onPress={onPressFunc}/>
         );
     }
 
     render() {
-            console.log("render");
         return (
             <ScrollView style={styles.container}>
-                <FlatList
+                <FlatList style={styles.listStyle}
                     data={this.props.dataList}
                     keyExtractor={item => item.name}
                     extraData={this.props.dataList}
@@ -55,19 +54,9 @@ export default connect(mapStateToProps,{})(CollectionScreen);
 const styles = StyleSheet.create({
     container: {
         flex: 3,
-        backgroundColor: 'rgb(211,211,211)'
+        backgroundColor: 'rgb(211,211,211)',
     },
-    button: {
-        backgroundColor: 'rgba(255, 255, 255, 0.4)',
-        height: 40,
-        marginHorizontal: 150,
-        borderRadius: 20,
-        justifyContent: 'center',
-    },
-    text: {
-        color: 'white',
-        fontWeight: 'bold',
-        fontSize: 16,
-        textAlign: 'center'
+    listStyle: {
+        marginTop: 7
     }
 });

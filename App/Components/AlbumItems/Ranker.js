@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Dimensions} from 'react-native';
+
+const { width, height } = Dimensions.get('window');
 
 export default class Ranker extends Component {
+
   constructor(props) {
     super(props);
   }
@@ -24,11 +27,12 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: height * 0.02
     },
     rankStyle : {
-        marginRight: 50,
-        marginLeft: 50,
+        marginRight: width * 0.1,
+        marginLeft: width * 0.1,
         fontSize: 50,
         color : '#ff69b4'
     },

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, TextInput} from 'react-native';
+import {StyleSheet, View, TextInput, Dimensions} from 'react-native';
+
+const { width, height } = Dimensions.get('window');
 
 export default class UserPassword extends Component {
     render() {
@@ -19,12 +21,12 @@ export default class UserPassword extends Component {
 
 const styles = StyleSheet.create({
     input: {
-        marginTop: 50,
-        marginBottom: 50,
+        marginTop: height * 0.05,
+        marginBottom: height * 0.1,
         backgroundColor: 'rgba(255, 255, 255, 0.4)',
-        height: 40,
-        marginHorizontal: 20,
-        paddingLeft: 50,
+        height: height * 0.05,
+        width: width * 0.8,
+        paddingLeft: width * 0.1,
         borderRadius: 20,
         color: '#ffffff',
         fontSize: 16,
@@ -32,6 +34,6 @@ const styles = StyleSheet.create({
     },
     inputWrapper: {
         flex: 1,
-        justifyContent: 'center'
+        alignItems: 'center'
     },
 });
